@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TCTweet : NSObject
+@interface TCTweet : NSObject {
+    NSNumber *_tweetId;
+    NSDate *_createdAt;
+    NSString *_text;
+    NSString *_fromUserName;
+    NSString *_toUserName;
+}
+
+@property (nonatomic, retain) NSNumber *tweetId;
+@property (nonatomic, retain) NSDate *createdAt;
+@property (nonatomic, copy) NSString *text;
+@property (nonatomic, copy) NSString *fromUserName;
+@property (nonatomic, copy) NSString *toUserName;
 
 @end

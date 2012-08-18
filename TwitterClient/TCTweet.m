@@ -10,4 +10,10 @@
 
 @implementation TCTweet
 
+@synthesize tweetId = _tweetId;
+@synthesize createdAt = _createdAt;
+@synthesize text = _text;
+@synthesize fromUserName = _fromUserName;
+@synthesize toUserName = _toUserName;
+
 @end

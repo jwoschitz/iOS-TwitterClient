@@ -6,7 +6,9 @@
 //  Copyright (c) 2012 Janosch Woschitz. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
 #import "TCAppDelegate.h"
+#import "TCTweet.h"
 
 @implementation TCAppDelegate
 
@@ -17,6 +19,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURLString:@"http://search.twitter.com/search.json"];
+    objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+    
+    RKObjectMapping *tweetMapping = [RKObjectMapping mappingForClass:[TCTweet class]];
+    [tweetMapping mapKeyPath:@"id" toAttribute:@"tweetId"];
+    [tweetMapping mapKeyPath:@"created_at" toAttribute:@"createdAt"];
+    [tweetMapping mapKeyPath:@"from_user_name" toAttribute:@"fromUserName"];
+    [tweetMapping mapKeyPath:@"toUserName" toAttribute:@"toUserName"];
+    [tweetMapping mapKeyPath:@"text" toAttribute:@"text"];
+    
+    [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
+    
+    [objectManager.mappingProvider setObjectMapping:tweetMapping forResourcePathPattern:@"?q=twitter&rpp=20"];
+    
+    
+    // search.twitter.com/search.json?q=twitter&rpp=20&include_entities=true
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
