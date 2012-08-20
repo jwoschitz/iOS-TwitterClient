@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TCTweetModel.h"
 
-@interface TCSearchResultTableViewController : UITableViewController
+@interface TCSearchResultTableViewController : UITableViewController {
+    
+    TCTweetModel *_model;
+}
 
 @end

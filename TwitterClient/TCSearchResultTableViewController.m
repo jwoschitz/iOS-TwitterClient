@@ -18,7 +18,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        _model = [[TCTweetModel alloc] init];
     }
     return self;
 }
@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    [self.tableView setDataSource: _model];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -46,26 +47,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    // Configure the cell...
-    
-    return cell;
-}
 
 /*
 // Override to support conditional editing of the table view.

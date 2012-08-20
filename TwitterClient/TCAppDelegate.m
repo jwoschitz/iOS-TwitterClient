@@ -8,6 +8,7 @@
 
 #import <RestKit/RestKit.h>
 #import "TCAppDelegate.h"
+#import "TCSearchResultTableViewController.h"
 #import "TCTweet.h"
 
 @implementation TCAppDelegate
@@ -33,12 +34,12 @@
     
     [objectManager.mappingProvider setObjectMapping:tweetMapping forResourcePathPattern:@"?q=twitter&rpp=20"];
     
-    
-    // search.twitter.com/search.json?q=twitter&rpp=20&include_entities=true
+    TCSearchResultTableViewController *tableViewController = [[TCSearchResultTableViewController alloc] initWithNibName:nil bundle:nil];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [self.window addSubview:tableViewController.view];
     return YES;
 }
 

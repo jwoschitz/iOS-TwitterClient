@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TCSearchModel : NSObject <UITableViewDataSource> {
+@interface TCTweetModel : NSObject <UITableViewDataSource> {
 
     NSMutableArray*  _tweets;
 }
