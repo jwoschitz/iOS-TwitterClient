@@ -18,7 +18,7 @@
         _tweets = [[NSMutableArray alloc] init];
         TCTweet *tweet = [[TCTweet alloc] init];
         tweet.text = @"testing";
-        [_tweets addObject: tweet]; 
+        [_tweets addObject: tweet];
     }
     return self;
 }
@@ -41,7 +41,7 @@
     }
     
     TCTweet *tweet = [_tweets objectAtIndex:indexPath.row];
-    [cell.textLabel setText:tweet.text];
+    cell.textLabel.text = tweet.text;
     
     return cell;
 }

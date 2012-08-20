@@ -34,7 +34,7 @@
     
     [objectManager.mappingProvider setObjectMapping:tweetMapping forResourcePathPattern:@"?q=twitter&rpp=20"];
     
-    TCSearchResultTableViewController *tableViewController = [[TCSearchResultTableViewController alloc] initWithNibName:nil bundle:nil];
+    TCSearchResultTableViewController *tableViewController = [[TCSearchResultTableViewController alloc] initWithStyle:UITableViewStylePlain];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
