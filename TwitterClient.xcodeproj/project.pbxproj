@@ -62,8 +62,9 @@
 		F27BCD5D15DFD02200D4B4D3 /* TCTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTweet.m; sourceTree = "<group>"; };
 		F27BCD6015DFD84200D4B4D3 /* TCSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSearchResultTableViewController.h; sourceTree = "<group>"; };
 		F27BCD6115DFD84200D4B4D3 /* TCSearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSearchResultTableViewController.m; sourceTree = "<group>"; };
-		F27BCDA615E2A86500D4B4D3 /* TCTweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; path = TCTweetModel.h; sourceTree = "<group>"; };
+		F27BCDA615E2A86500D4B4D3 /* TCTweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTweetModel.h; sourceTree = "<group>"; };
 		F27BCDA715E2A86500D4B4D3 /* TCTweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTweetModel.m; sourceTree = "<group>"; };
+		F27BCE1C15E40BD200D4B4D3 /* TCTweetModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTweetModelDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +177,7 @@
 				F27BCDA515E2A70D00D4B4D3 /* Entities */,
 				F27BCDA615E2A86500D4B4D3 /* TCTweetModel.h */,
 				F27BCDA715E2A86500D4B4D3 /* TCTweetModel.m */,
+				F27BCE1C15E40BD200D4B4D3 /* TCTweetModelDelegate.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";

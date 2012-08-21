@@ -26,9 +26,9 @@
 - (void) loadDataWithDelegate: (id) delegate
 {
     RKObjectManager *objectManager = [RKObjectManager sharedManager];
-    objectManager.client.baseURL = [RKURL URLWithString:@"http://search.twitter.com/search.json?q=twitter&rpp=20"];
+    objectManager.client.baseURL = [RKURL URLWithString:@"http://search.twitter.com"];
     _delegate = delegate;
-    [objectManager loadObjectsAtResourcePath:@"" delegate:self];
+    [objectManager loadObjectsAtResourcePath:@"/search.json?q=twitter&rpp=20" delegate:self];
 }
 
 #pragma mark RKObjectLoaderDelegate methods
