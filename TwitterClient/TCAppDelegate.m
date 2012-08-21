@@ -33,7 +33,6 @@
     [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
     
     [objectManager.mappingProvider setMapping:tweetMapping forKeyPath:@"results"];
-    //[objectManager.mappingProvider setObjectMapping:tweetMapping forResourcePathPattern:@"/search.json?q=:query&rpp=20"];
     
     TCSearchResultTableViewController *tableViewController = [[TCSearchResultTableViewController alloc] initWithStyle:UITableViewStylePlain];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
