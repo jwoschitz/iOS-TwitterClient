@@ -35,12 +35,12 @@
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
 {
-    NSLog(@"Loaded payload: %@", [response bodyAsString]);
+    //NSLog(@"Loaded payload: %@", [response bodyAsString]);
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
-    NSLog(@"Loaded statuses: %@", objects);
+    //NSLog(@"Loaded statuses: %@", objects);
     [_tweets removeAllObjects];
     [_tweets addObjectsFromArray:objects];
     [_delegate modelDidLoadData];

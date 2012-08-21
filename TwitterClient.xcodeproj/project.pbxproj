@@ -25,6 +25,8 @@
 		F27BCD5E15DFD02200D4B4D3 /* TCTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BCD5D15DFD02200D4B4D3 /* TCTweet.m */; };
 		F27BCD6215DFD84200D4B4D3 /* TCSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BCD6115DFD84200D4B4D3 /* TCSearchResultTableViewController.m */; };
 		F27BCDA815E2A86500D4B4D3 /* TCTweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BCDA715E2A86500D4B4D3 /* TCTweetModel.m */; };
+		F27BCE2215E4255B00D4B4D3 /* TCSearchResultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BCE2015E4255B00D4B4D3 /* TCSearchResultDetailViewController.m */; };
+		F27BCE2315E4255B00D4B4D3 /* TCSearchResultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27BCE2115E4255B00D4B4D3 /* TCSearchResultDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,9 @@
 		F27BCDA615E2A86500D4B4D3 /* TCTweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTweetModel.h; sourceTree = "<group>"; };
 		F27BCDA715E2A86500D4B4D3 /* TCTweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTweetModel.m; sourceTree = "<group>"; };
 		F27BCE1C15E40BD200D4B4D3 /* TCTweetModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTweetModelDelegate.h; sourceTree = "<group>"; };
+		F27BCE1F15E4255B00D4B4D3 /* TCSearchResultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSearchResultDetailViewController.h; sourceTree = "<group>"; };
+		F27BCE2015E4255B00D4B4D3 /* TCSearchResultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSearchResultDetailViewController.m; sourceTree = "<group>"; };
+		F27BCE2115E4255B00D4B4D3 /* TCSearchResultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCSearchResultDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +135,9 @@
 		F27BCD2815DFC57A00D4B4D3 /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				F27BCE1F15E4255B00D4B4D3 /* TCSearchResultDetailViewController.h */,
+				F27BCE2015E4255B00D4B4D3 /* TCSearchResultDetailViewController.m */,
+				F27BCE2115E4255B00D4B4D3 /* TCSearchResultDetailViewController.xib */,
 				F27BCDA415E2A70400D4B4D3 /* Model */,
 				F27BCD6015DFD84200D4B4D3 /* TCSearchResultTableViewController.h */,
 				F27BCD6115DFD84200D4B4D3 /* TCSearchResultTableViewController.m */,
@@ -265,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27BCD2D15DFC57A00D4B4D3 /* InfoPlist.strings in Resources */,
+				F27BCE2315E4255B00D4B4D3 /* TCSearchResultDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +328,7 @@
 				F27BCD5E15DFD02200D4B4D3 /* TCTweet.m in Sources */,
 				F27BCD6215DFD84200D4B4D3 /* TCSearchResultTableViewController.m in Sources */,
 				F27BCDA815E2A86500D4B4D3 /* TCTweetModel.m in Sources */,
+				F27BCE2215E4255B00D4B4D3 /* TCSearchResultDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

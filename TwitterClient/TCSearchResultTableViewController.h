@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "TCTweetModel.h"
 #import "TCTweetModelDelegate.h"
+#import "TCSearchResultDetailViewController.h"
 
 @interface TCSearchResultTableViewController : UITableViewController <TCTweetModelDelegate> {
     
     TCTweetModel *_model;
+    TCSearchResultDetailViewController *_detailViewController;
 }
 
 @end
