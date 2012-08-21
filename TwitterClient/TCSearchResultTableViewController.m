@@ -23,11 +23,17 @@
     return self;
 }
 
+- (void)modelDidLoadData
+{
+    [self.tableView reloadData];
+} 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self.tableView setDataSource: _model];
+    [_model loadDataWithDelegate: self];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

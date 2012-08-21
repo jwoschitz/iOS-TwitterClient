@@ -23,6 +23,38 @@
     return self;
 }
 
+- (void) loadDataWithDelegate: (id) delegate
+{
+    RKObjectManager *objectManager = [RKObjectManager sharedManager];
+    objectManager.client.baseURL = [RKURL URLWithString:@"http://search.twitter.com/search.json?q=twitter&rpp=20"];
+    _delegate = delegate;
+    [objectManager loadObjectsAtResourcePath:@"" delegate:self];
+}
+
+#pragma mark RKObjectLoaderDelegate methods
+
+- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
+{
+    NSLog(@"Loaded payload: %@", [response bodyAsString]);
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+{
+    NSLog(@"Loaded statuses: %@", objects);
+    [_tweets removeAllObjects];
+    [_tweets addObjectsFromArray:objects];
+    [_delegate modelDidLoadData];
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    NSLog(@"Hit error: %@", error);
+}
+
+#pragma mark UITableViewDelegate methods
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;

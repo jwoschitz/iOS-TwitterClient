@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURLString:@"http://search.twitter.com/search.json"];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURLString:@"http://search.twitter.com/search.json?q=twitter&rpp=20"];
     objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
     
     RKObjectMapping *tweetMapping = [RKObjectMapping mappingForClass:[TCTweet class]];
@@ -32,7 +32,7 @@
     
     [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
     
-    [objectManager.mappingProvider setObjectMapping:tweetMapping forResourcePathPattern:@"?q=twitter&rpp=20"];
+    [objectManager.mappingProvider setObjectMapping:tweetMapping forResourcePathPattern:@""];
     
     TCSearchResultTableViewController *tableViewController = [[TCSearchResultTableViewController alloc] initWithStyle:UITableViewStylePlain];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
