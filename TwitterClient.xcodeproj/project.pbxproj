@@ -135,12 +135,12 @@
 		F27BCD2815DFC57A00D4B4D3 /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
-				F27BCE1F15E4255B00D4B4D3 /* TCSearchResultDetailViewController.h */,
-				F27BCE2015E4255B00D4B4D3 /* TCSearchResultDetailViewController.m */,
-				F27BCE2115E4255B00D4B4D3 /* TCSearchResultDetailViewController.xib */,
 				F27BCDA415E2A70400D4B4D3 /* Model */,
 				F27BCD6015DFD84200D4B4D3 /* TCSearchResultTableViewController.h */,
 				F27BCD6115DFD84200D4B4D3 /* TCSearchResultTableViewController.m */,
+				F27BCE1F15E4255B00D4B4D3 /* TCSearchResultDetailViewController.h */,
+				F27BCE2015E4255B00D4B4D3 /* TCSearchResultDetailViewController.m */,
+				F27BCE2115E4255B00D4B4D3 /* TCSearchResultDetailViewController.xib */,
 				F27BCD3115DFC57A00D4B4D3 /* TCAppDelegate.h */,
 				F27BCD3215DFC57A00D4B4D3 /* TCAppDelegate.m */,
 				F27BCD3415DFC57A00D4B4D3 /* TwitterClient.xcdatamodeld */,

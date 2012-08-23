@@ -28,6 +28,8 @@
 }
 
 - (void) updateView {
+    NSData *imageData =  [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:self.tweet.profileImageUrl]];
+    self.userImage.image = [[UIImage alloc] initWithData:imageData];
     self.tweetLabel.text = self.tweet.text;
 }
 
