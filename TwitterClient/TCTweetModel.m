@@ -16,9 +16,6 @@
 - (id) init {
     if (self = [super init]) {
         _tweets = [[NSMutableArray alloc] init];
-        TCTweet *tweet = [[TCTweet alloc] init];
-        tweet.text = @"testing";
-        [_tweets addObject: tweet];
     }
     return self;
 }
