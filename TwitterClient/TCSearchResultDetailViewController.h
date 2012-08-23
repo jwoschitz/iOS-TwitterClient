@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) TCTweet *tweet;
 @property (weak, nonatomic) IBOutlet UILabel *tweetLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
 
 @end

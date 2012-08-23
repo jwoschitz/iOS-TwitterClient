@@ -30,6 +30,7 @@
     [tweetMapping mapKeyPath:@"from_user_name" toAttribute:@"fromUserName"];
     [tweetMapping mapKeyPath:@"toUserName" toAttribute:@"toUserName"];
     [tweetMapping mapKeyPath:@"text" toAttribute:@"text"];
+    [tweetMapping mapKeyPath:@"profile_image_url" toAttribute:@"profileImageUrl"];
     
     [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
     

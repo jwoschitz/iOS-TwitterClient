@@ -16,6 +16,7 @@
 
 @synthesize tweet = _tweet;
 @synthesize tweetLabel = _tweetLabel;
+@synthesize userImage = _userImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,6 +46,7 @@
 - (void)viewDidUnload
 {
     [self setTweetLabel:nil];
+    [self setUserImage:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

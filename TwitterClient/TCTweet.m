@@ -15,5 +15,6 @@
 @synthesize text = _text;
 @synthesize fromUserName = _fromUserName;
 @synthesize toUserName = _toUserName;
+@synthesize profileImageUrl = _profileImageUrl;
 
 @end
