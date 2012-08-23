@@ -26,11 +26,20 @@
     return self;
 }
 
+- (void) updateView {
+    self.tweetLabel.text = self.tweet.text;
+}
+
+- (void) setTweet:(TCTweet *)tweet {
+    _tweet = tweet;
+    [self updateView];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.tweetLabel.text = self.tweet.text;
+    [self updateView];
 }
 
 - (void)viewDidUnload
