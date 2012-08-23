@@ -15,6 +15,7 @@
     
     TCTweetModel *_model;
     TCSearchResultDetailViewController *_detailViewController;
+    UIActivityIndicatorView  *_indicator;
 }
 
 @end

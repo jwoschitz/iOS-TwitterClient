@@ -21,12 +21,16 @@
     self = [super initWithStyle:style];
     if (self) {
         _model = [[TCTweetModel alloc] init];
+        _indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        _indicator.frame=CGRectMake(145, 160, 25, 25);
+        _indicator.tag  = 1;
     }
     return self;
 }
 
 - (void)modelDidLoadData
 {
+    [_indicator removeFromSuperview];
     [self.tableView reloadData];
 }
 
@@ -47,6 +51,8 @@
     [super viewDidLoad];
     
     [self.tableView setDataSource: _model];
+    [self.view addSubview: _indicator];
+    [_indicator startAnimating];
     [_model loadDataWithDelegate: self];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
