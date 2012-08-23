@@ -14,6 +14,7 @@
 @implementation TCAppDelegate
 
 @synthesize window = _window;
+@synthesize navigationController = _navigationController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
@@ -34,12 +35,15 @@
     
     [objectManager.mappingProvider setMapping:tweetMapping forKeyPath:@"results"];
     
-    TCSearchResultTableViewController *tableViewController = [[TCSearchResultTableViewController alloc] initWithStyle:UITableViewStylePlain];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    self.navigationController = [[UINavigationController alloc] init];
+    
+    TCSearchResultTableViewController *tableViewController = [[TCSearchResultTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:tableViewController animated:NO];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    [self.window addSubview:tableViewController.view];
+    [self.window addSubview:self.navigationController.view];
     return YES;
 }
 

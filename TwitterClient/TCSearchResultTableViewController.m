@@ -28,7 +28,19 @@
 - (void)modelDidLoadData
 {
     [self.tableView reloadData];
-} 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+    
+	[self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+    
+	[self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 
 - (void)viewDidLoad
 {
@@ -68,8 +80,7 @@
     }
     
     _detailViewController.tweet = tweet;
-      
-    [self.view addSubview:_detailViewController.view];
+    [self.navigationController pushViewController:_detailViewController animated:YES]; 
 }
 
 @end
