@@ -5,10 +5,13 @@ It uses [RestKit](http://restkit.org/) to consume a simple call of the [Twitter 
 
 ## Setup
 
-This project uses [cocoapods](http://www.cocoapods.org) as dependency manager
+This project uses the ruby gem [cocoapods](http://www.cocoapods.org) to manage its dependencies. Therefore ruby is a mandatory requirement.
 
-1. Install cocoapods
-** gem install cocoapods
-** pod setup
+1. Install cocoapods by running
+
+    ```
+    gem install cocoapods
+    pod setup
+    ```    
 2. Navigate to your local repository and run `pod install`, this will download the dependencies which are configured in the local [Podfile](PodFile)
 3. Run `open TwitterClient.xcworkspace` to open the project in Xcode, by doing this cocoapods is able to link the dependencies to the project
